@@ -28,6 +28,13 @@ func (h *Handler) InitRoutes() *gin.Engine {
 			auth.POST("/sign-in", h.SignIn)
 			auth.POST("/sign-up", h.SignUp)
 		}
+
+		// orders := user.Group("orders")
+		// {
+		// 	orders.GET("/")
+		// 	orders.GET("/id")
+		// 	orders.POST("/create")
+		// }
 	}
 
 	driver := router.Group("/driver")
@@ -36,6 +43,19 @@ func (h *Handler) InitRoutes() *gin.Engine {
 		{
 			auth.POST("/sign-in", h.DriverSignIn)
 		}
+		// car := driver.Group("/car")
+		// {
+		// 	car.POST("/add", h.AttachCar)
+		// }
+		// orders := driver.Group("orders")
+		// {
+		// 	orders.GET("/")
+		// 	orders.GET("/id")
+		// 	orders.POST("/:id/take")
+		// 	orders.POST("/:id/start")
+		// 	orders.POST("/:id/complete")
+		// 	orders.POST("/:id/reject")
+		// }
 	}
 
 	stuff := router.Group("/stuff")
