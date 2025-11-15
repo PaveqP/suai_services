@@ -11,12 +11,21 @@ type Auth interface {
 	GetUserCredentials(email string) (*user_models.ReturningUserCredentials, error)
 }
 
+type Manager interface {
+	GetUserInfo(userId string) (*user_models.UserInfo, error)
+	UpdateUserInfo(userID string, userInfo *user_models.UserInfo) error
+	GetUserOrders(userID string) (*[]user_models.OrderResponse, error)
+	CreateOrder(userId string, order *user_models.CreateOrderRequest) (string, error)
+}
+
 type UserRepository struct {
 	Auth
+	Manager
 }
 
 func NewRepository(db *sqlx.DB) *UserRepository {
 	return &UserRepository{
-		Auth: NewAuthRepository(db),
+		Auth:    NewAuthRepository(db),
+		Manager: NewManagerRepository(db),
 	}
 }

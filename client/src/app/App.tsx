@@ -1,23 +1,19 @@
-import { Navigate, Route, BrowserRouter as Router, Routes } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.scss'
-import { APP_ROUTES } from '../shared'
-import { Info } from '../shared'
-import { Auth } from '../user'
 import { Provider } from 'react-redux'
-import { store } from '../store/store'
+import { persistor, store } from '../store/store'
+import { AppRoutes } from './AppRoutes'
+import { PersistGate } from 'redux-persist/integration/react'
 
 function App() {
 
   return (
     <Provider store={store}>
-      <Router>
-        <Routes>
-          <Route path={APP_ROUTES.home} element={<Navigate to={APP_ROUTES.info} replace />}/>
-          <Route path={APP_ROUTES.info} element={<Info></Info>}></Route>
-
-          <Route path={APP_ROUTES.userAuth} element={<Auth/>}/>
-        </Routes>
-      </Router>
+      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+        <Router>
+          <AppRoutes/>
+        </Router>
+      </PersistGate>
     </Provider>
   )
 }

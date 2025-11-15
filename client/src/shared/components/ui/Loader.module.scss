@@ -1,0 +1,38 @@
+.Loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Spinner {
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.small {
+    .Spinner {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.medium {
+    .Spinner {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.large {
+    .Spinner {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

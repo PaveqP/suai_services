@@ -1,0 +1,279 @@
+.Wrapper {
+  padding: 40px;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  line-height: 40px;
+}
+
+.Title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.Content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex: 1;
+}
+
+.InfoCard {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+}
+
+.CardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+  line-height: 30px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.InfoGrid {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.InfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+}
+
+.InfoLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.InfoValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  padding: 10px 10px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.ContactInfo {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.ContactParams{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ContactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 16px;
+  border: 1px solid #e5e7eb;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+  }
+}
+
+.ContactIcon {
+  font-size: 18px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ContactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.ContactLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.ContactValue {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.Actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.EditButton {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.LogoutButton {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #ef4444;
+  border: 2px solid #ef4444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #ef4444;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .Wrapper {
+    padding: 24px 20px;
+    gap: 32px;
+  }
+
+  .Header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .Title {
+    font-size: 28px;
+  }
+
+  .Avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 18px;
+  }
+
+  .InfoCard {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .InfoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .ContactItem {
+    padding: 16px;
+  }
+
+  .Actions {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .EditButton,
+  .LogoutButton {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.PaymentItem{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.PaymentDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.PaymentLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.PaymentValue {
+  font-size: 14px;
+  color: #1f2937;
+  font-weight: 600;
+}

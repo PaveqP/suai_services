@@ -11,7 +11,7 @@ interface AuthState {
 const initialState: AuthState = {
   AccessToken: null,
   RefreshToken: null,
-  isAuthenticated: !!localStorage.getItem("token"),
+  isAuthenticated: !!localStorage.getItem("access_token"),
 };
 
 export const authSlice = createSlice({

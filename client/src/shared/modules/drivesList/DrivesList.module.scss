@@ -1,0 +1,29 @@
+.Wrapper {
+    padding: 0px 40px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.Order {
+    min-width: 420px;
+}
+
+.Filters {
+    display: flex;
+    padding-left: 40px;
+}
+
+.CategoryFilter{
+    display: flex;
+    gap: 20px;
+}
+
+.CheckBoxFilter{
+    display: flex;
+    gap: 5px;
+}

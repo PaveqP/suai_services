@@ -1,7 +1,8 @@
 import { useState } from "react"
-import { Button, Input } from "../../../../../shared"
+import { APP_ROUTES, Button, Input } from "../../../../../shared"
 import s from './Authorization.module.scss'
 import { useSignInMutation } from "../../../../services/authApi"
+import { useNavigate } from "react-router-dom"
 
 const Authorization = () => {
 
@@ -10,6 +11,8 @@ const Authorization = () => {
 
     const [signIn, {isLoading: loginInProgress, error: loginError}] = useSignInMutation()
 
+    const navigate = useNavigate()
+
     const submitLoginForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         console.log(email, password)
@@ -17,6 +20,7 @@ const Authorization = () => {
           email,
           password
         })
+        navigate(APP_ROUTES.userAccount)
     }
 
   return (

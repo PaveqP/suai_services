@@ -42,11 +42,11 @@ func main() {
 	userServices := user_services.NewService(userRepositories, jwtService)
 	driverServices := driver_services.NewService(driverRepositories, jwtService)
 	stuffServices := stuff_services.NewService(stuffRepositories, userRepositories, driverRepositories, jwtService)
-	handlers := handlers.NewHandler(userServices, driverServices, stuffServices)
+	handlers := handlers.NewHandler(userServices, driverServices, stuffServices, jwtService)
 
 	c := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
-		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+		AllowedMethods:   []string{"GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"*"},
 		AllowCredentials: false,
 		Debug:            false,

@@ -1,0 +1,196 @@
+.Wrapper {
+  padding: 24px;
+  max-width: 480px;
+  height: 400px;
+  min-height: 100%;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+  }
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.Category {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.CategoryIcon {
+  font-size: 18px;
+}
+
+.Status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.Route {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.RoutePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  
+  &:last-of-type {
+    margin-top: 16px;
+  }
+}
+
+.PointMarker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.PointMarker.Destination {
+  background: #ef4444;
+}
+
+.PointInfo {
+  flex: 1;
+}
+
+.PointAddress {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.PointCity {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.RouteDivider {
+  height: 20px;
+  width: 2px;
+  background: #e5e7eb;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.DriverInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.CarIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.CarDetails {
+  flex: 1;
+}
+
+.CarModel {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+.CarNumber {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.DriverName {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.Options {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.OptionIcon {
+  font-size: 14px;
+}
+
+.PriceSection {
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.Price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #059669;
+}
+
+@media (max-width: 480px) {
+  .Wrapper {
+    padding: 20px;
+    margin: 0 16px;
+  }
+  
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .Options {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .Price {
+    font-size: 18px;
+  }
+}

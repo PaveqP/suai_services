@@ -1,0 +1,295 @@
+.Wrapper {
+  min-height: 100vh;
+  background: #f8fafc;
+  padding: 40px;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  background: white;
+  padding: 24px 40px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  gap: 20px;
+}
+
+.Title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0;
+}
+
+.Avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.BackButton {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  
+  &:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+  }
+}
+
+.LogoutButton {
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: white;
+  color: #ef4444;
+  border: 1px solid #ef4444;
+  
+  &:hover {
+    background: #ef4444;
+    color: white;
+  }
+}
+
+.Content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.InfoCard {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.CardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 24px 0;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.InfoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.InfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.InfoLabel {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.InfoValue {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  padding: 10px 10px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.EditButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.CarsList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.CarItem {
+  padding: 16px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.CarInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.CarBrand {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.CarDetails {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.ActiveBadge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: #10b981;
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.AddCarButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.CarForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.CarFormActions {
+  display: flex;
+  gap: 12px;
+}
+
+.SaveCarButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.CancelCarButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+  }
+}
+
+.LoadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+  background: #f8fafc;
+}
+
+.LoadingContainer p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .Wrapper {
+    padding: 24px 20px;
+  }
+  
+  .Header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+  }
+  
+  .InfoCard {
+    padding: 24px;
+  }
+  
+  .InfoGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .CarFormActions {
+    flex-direction: column;
+  }
+  
+  .SaveCarButton,
+  .CancelCarButton {
+    width: 100%;
+  }
+}
+

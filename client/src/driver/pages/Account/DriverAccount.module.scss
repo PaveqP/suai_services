@@ -1,0 +1,488 @@
+.Container {
+  display: flex;
+  max-height: 100vh;
+  background: #f8fafc;
+}
+
+.Sidebar {
+  width: 400px;
+  min-width: 400px;
+  background: white;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.MainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.Header {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 24px 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.HeaderContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.TitleSection {
+  flex: 1;
+}
+
+.Title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.Subtitle {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.Actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.ProfileButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  white-space: nowrap;
+  
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  }
+}
+
+.ShiftSection {
+  padding: 24px 40px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ShiftCard {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 24px;
+  border: 2px solid #e5e7eb;
+}
+
+.ShiftTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 20px 0;
+}
+
+.ActiveShift {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.InactiveShift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.ShiftStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.StatusBadge {
+  padding: 8px 16px;
+  background: #10b981;
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ShiftTime {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.ShiftStats {
+  display: flex;
+  gap: 24px;
+}
+
+.StatItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.StatLabel {
+  font-size: 12px;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.StatValue {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.ShiftMessage {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.StartShiftButton,
+.EndShiftButton {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.StartShiftButton {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+}
+
+.EndShiftButton {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  
+  &:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  }
+}
+
+.OrdersSection {
+  flex: 1;
+  padding: 32px 40px;
+  overflow-y: auto;
+}
+
+.OrdersList {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.OrderCard {
+  padding: 24px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+}
+
+.OrderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.OrderCategory {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #1f2937;
+}
+
+.CategoryIcon {
+  font-size: 18px;
+}
+
+.OrderStatus {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.OrderRoute {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.RoutePoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  
+  &:last-of-type {
+    margin-top: 16px;
+  }
+}
+
+.PointMarker {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #3b82f6;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+
+.PointMarker.Destination {
+  background: #ef4444;
+}
+
+.PointInfo {
+  flex: 1;
+}
+
+.PointAddress {
+  font-weight: 500;
+  color: #1f2937;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.PointCity {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.RouteDivider {
+  height: 20px;
+  width: 2px;
+  background: #e5e7eb;
+  margin-left: 5px;
+  margin-top: 2px;
+}
+
+.OrderOptions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.Option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #f3f4f6;
+  border-radius: 16px;
+  font-size: 12px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.OptionIcon {
+  font-size: 14px;
+}
+
+.OrderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+}
+
+.OrderPrice {
+  font-size: 20px;
+  font-weight: 700;
+  color: #059669;
+}
+
+.OrderActions {
+  display: flex;
+  gap: 8px;
+}
+
+.AcceptButton,
+.StartTripButton,
+.CompleteButton {
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
+
+.EmptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 40px;
+  background: white;
+  border-radius: 16px;
+  border: 2px dashed #e5e7eb;
+}
+
+.EmptyIcon {
+  font-size: 64px;
+  margin-bottom: 24px;
+}
+
+.EmptyState h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 8px 0;
+}
+
+.EmptyState p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.LoadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 16px;
+  background: #f8fafc;
+}
+
+.LoadingContainer p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .Container {
+    flex-direction: column;
+  }
+  
+  .Sidebar {
+    width: 100%;
+    min-width: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .HeaderContent {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .Actions {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .Header {
+    padding: 20px 24px;
+  }
+  
+  .OrdersSection {
+    padding: 24px;
+  }
+  
+  .ShiftSection {
+    padding: 20px 24px;
+  }
+  
+  .Title {
+    font-size: 24px;
+  }
+  
+  .Actions {
+    flex-direction: column;
+  }
+  
+  .ShiftStats {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .OrderFooter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  
+  .OrderActions {
+    width: 100%;
+  }
+  
+  .AcceptButton,
+  .StartTripButton,
+  .CompleteButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Header {
+    padding: 16px 20px;
+  }
+  
+  .OrdersSection {
+    padding: 16px 20px;
+  }
+  
+  .ShiftSection {
+    padding: 16px 20px;
+  }
+  
+  .EmptyState {
+    padding: 40px 20px;
+  }
+  
+  .EmptyIcon {
+    font-size: 48px;
+  }
+}

@@ -1,0 +1,216 @@
+.Container {
+    display: flex;
+    max-height: 100vh;
+    background: #f8fafc;
+}
+
+.Sidebar {
+    width: 400px;
+    min-width: 400px;
+    background: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    overflow-y: auto;
+}
+
+.MainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.Header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 24px 40px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.HeaderContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.TitleSection {
+    flex: 1;
+}
+
+.Title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+}
+
+.Subtitle {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0;
+}
+
+.Actions {
+    display: flex;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.CreateOrderButton {
+    padding: 12px 24px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    border: none;
+    white-space: nowrap;
+    
+    &:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+}
+
+.SupportButton {
+    padding: 12px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: white;
+    color: #374151;
+    border: 1px solid #d1d5db;
+    white-space: nowrap;
+    
+    &:hover {
+        background: #f9fafb;
+        border-color: #9ca3af;
+    }
+}
+
+.OrdersSection {
+    flex: 1;
+    padding: 32px 40px;
+    overflow-y: auto;
+    
+    & > div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+.EmptyState {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px;
+    background: white;
+    border-radius: 16px;
+    border: 2px dashed #e5e7eb;
+}
+
+.EmptyIcon {
+    font-size: 64px;
+    margin-bottom: 24px;
+}
+
+.EmptyState h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0 0 8px 0;
+}
+
+.EmptyState p {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0 0 24px 0;
+}
+
+.EmptyAction {
+    padding: 12px 32px;
+    font-weight: 600;
+}
+
+.LoadingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 16px;
+    background: #f8fafc;
+}
+
+.LoadingContainer p {
+    font-size: 16px;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .Container {
+        flex-direction: column;
+    }
+    
+    .Sidebar {
+        width: 100%;
+        min-width: auto;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .HeaderContent {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+    
+    .Actions {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .Header {
+        padding: 20px 24px;
+    }
+    
+    .OrdersSection {
+        padding: 24px;
+    }
+    
+    .Title {
+        font-size: 24px;
+    }
+    
+    .Actions {
+        flex-direction: column;
+    }
+    
+    .CreateOrderButton,
+    .SupportButton {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .Header {
+        padding: 16px 20px;
+    }
+    
+    .OrdersSection {
+        padding: 16px 20px;
+    }
+    
+    .EmptyState {
+        padding: 40px 20px;
+    }
+    
+    .EmptyIcon {
+        font-size: 48px;
+    }
+}
