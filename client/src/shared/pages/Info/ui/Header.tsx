@@ -13,9 +13,12 @@ const Header = () => {
   return (
     <nav>
       <div className={s.navContainer}>
-        <Button onClick={() => handleNavigate(APP_ROUTES.driverAuth)}>Стать водителем</Button>
-        <Button onClick={() => handleNavigate(APP_ROUTES.userAuth)}>Войти</Button>
-        <Button onClick={() => handleNavigate(APP_ROUTES.userAuth)}>Зaрегистрироваться</Button>
+        <h1>Служба такси</h1>
+        <div className={s.Actions}>
+          <Button onClick={() => handleNavigate(APP_ROUTES.driverAuth)}>Стать водителем</Button>
+          <Button onClick={() => handleNavigate(APP_ROUTES.userAuth)}>Войти</Button>
+          <Button onClick={() => handleNavigate(APP_ROUTES.userAuth)}>Зaрегистрироваться</Button>
+        </div>
       </div>
     </nav>
   )
